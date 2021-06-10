@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#9FA8DA">
+
+    <TextView
+        android:textColor="@color/white"
+        android:layout_margin="64dp"
+        android:id="@+id/main_rotulo_inclinacaomedia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:text="@string/inclinacao_media"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="24sp"/>
+    <TextView
+        android:textColor="@color/white"
+        android:id="@+id/main_inclicacao_resultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_light"
+        android:text="@string/i_1_23"
+        android:textSize="72sp"
+        app:layout_constraintTop_toBottomOf="@id/main_rotulo_inclinacaomedia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:textColor="@color/white"
+        android:id="@+id/estado_piso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:textSize="20sp"
+        android:text="@string/piso_plano"
+        app:layout_constraintTop_toBottomOf="@id/main_inclicacao_resultado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+
+        android:id="@+id/main_caixa_slider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/estado_piso"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/desnivel"/>
+
+        <com.google.android.material.slider.Slider
+            android:layout_margin="24dp"
+            android:id="@+id/main_desnivel_slider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:valueFrom="0.00"
+            android:valueTo="5.00"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/comprimento_m"/>
+
+        <com.google.android.material.slider.Slider
+            android:layout_margin="24dp"
+            android:id="@+id/main_comprimento_slider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:valueFrom="0.00"
+            android:valueTo="50.00"/>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Rampolador</string>
+    <string name="inclinacao_media">Inclinicação Média</string>
+    <string name="i_1_23">i: 1.23%</string>
+    <string name="piso_plano">Piso Plano</string>
+    <string name="desnivel">Desnível (m)</string>
+    <string name="comprimento_m">Comprimento (m)</string>
+</resources>
